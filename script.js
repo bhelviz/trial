@@ -1,1 +1,1 @@
-alert('hithere');
+alert('hello');
