@@ -1,0 +1,190 @@
+.process-timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.phase-section {
+    margin-bottom: 15px;
+}
+.phase-header {
+    text-align: center;
+}
+.phase-row {
+    position: relative;
+}
+.timeline-item-new {
+    position: relative;
+    transition: all 0.3s ease;
+}
+.timeline-content-new {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.timeline-content-new:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.phase-1-row .timeline-content-new:hover {
+    border-color: rgba(13, 110, 253, 0.25);
+}
+.phase-2-row .timeline-content-new:hover {
+    border-color: rgba(111, 66, 193, 0.25);
+}
+.timeline-icon-new {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+.step-badge-new {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.bg-phase1 {
+    background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    color: #fff;
+}
+.bg-phase2 {
+    background: linear-gradient(135deg, #6f42c1, #d63384);
+    color: #fff;
+}
+.step-title-new {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #212529;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+.step-subtitle-new {
+    font-size: 0.74rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.step-desc-new {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+@media (min-width: 992px) {
+    .phase-row {
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+    }
+    .phase-row::before {
+        content: '';
+        position: absolute;
+        top: 21px;
+        left: 8%;
+        right: 8%;
+        height: 2px;
+        background: #dee2e6;
+        z-index: 1;
+    }
+    .phase-1-row::before {
+        background: linear-gradient(to right, rgba(13, 110, 253, 0.1), rgba(13, 202, 240, 0.4), rgba(13, 110, 253, 0.1));
+    }
+    .phase-2-row::before {
+        background: linear-gradient(to right, rgba(111, 66, 193, 0.1), rgba(214, 51, 132, 0.4), rgba(111, 66, 193, 0.1));
+    }
+    .timeline-item-new {
+        flex: 1 1 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+    }
+    .timeline-icon-new {
+        background-color: #fff !important;
+        border: 2px solid;
+        margin-bottom: 6px;
+        z-index: 3;
+    }
+    .phase-1-row .timeline-icon-new {
+        border-color: #0d6efd;
+        color: #0d6efd;
+    }
+    .phase-2-row .timeline-icon-new {
+        border-color: #6f42c1;
+        color: #6f42c1;
+    }
+    .timeline-content-new {
+        padding: 10px 8px;
+        width: 100%;
+    }
+    .timeline-item-new:hover .timeline-icon-new {
+        transform: scale(1.1);
+    }
+    .phase-1-row .timeline-item-new:hover .timeline-icon-new {
+        background: #0d6efd !important;
+        color: #fff;
+    }
+    .phase-2-row .timeline-item-new:hover .timeline-icon-new {
+        background: #6f42c1 !important;
+        color: #fff;
+    }
+}
+@media (max-width: 991px) {
+    .phase-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 45px;
+        position: relative;
+    }
+    .phase-row::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 20px;
+        width: 2px;
+        background: #dee2e6;
+        z-index: 1;
+    }
+    .phase-1-row::before {
+        background: linear-gradient(to bottom, #0d6efd, #0dcaf0);
+    }
+    .phase-2-row::before {
+        background: linear-gradient(to bottom, #6f42c1, #d63384);
+    }
+    .timeline-item-new {
+        width: 100%;
+        z-index: 2;
+    }
+    .timeline-icon-new {
+        position: absolute;
+        left: -45px;
+        top: 10px;
+        background-color: #fff;
+        border: 2px solid;
+        z-index: 3;
+    }
+    .phase-1-row .timeline-icon-new {
+        border-color: #0d6efd;
+        color: #0d6efd;
+    }
+    .phase-2-row .timeline-icon-new {
+        border-color: #6f42c1;
+        color: #6f42c1;
+    }
+    .timeline-content-new {
+        padding: 12px 15px;
+    }
+}
