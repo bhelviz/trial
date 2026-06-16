@@ -1,0 +1,1604 @@
+Line 39:
+  create-gatepass.php:      "                        <h1 class=\"mt-2 my-2\">Create Material Gatepass<\/h1>"
+  create-gatepass copy.php: "                        <h1 class=\"mt-2 my-2\">Create Material Gatepass (Inward)<\/h1>"
+
+Line 42:
+  create-gatepass.php:      "                        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {"
+  create-gatepass copy.php: "                        if (!isset($_POST[\"itemDescription1\"])) {"
+
+Line 44:
+  create-gatepass.php:      "                            <form name=\"f1\" method=\"post\" onsubmit=\"return confirm('Are you sure you want to create this Material Gatepass?');\">"
+  create-gatepass copy.php: "                            <form name=\"f1\" method=\"post\">"
+
+Line 103:
+  create-gatepass.php:      "                                                <?php"
+  create-gatepass copy.php: "                                                <option value=\"2767333\">PARTHA DAS (E6)<\/option>"
+
+Line 104:
+  create-gatepass.php:      "                                                $prepstmtOfficial = $dBhandler->prepare(\"SELECT HOU_ID, HOU_NAME, HOU_DESIGNATION FROM hpvp_osgp_user WHERE HOU_ROLE = 'Recommender' ORDER BY HOU_NAME\");"
+  create-gatepass copy.php: "                                                <option value=\"2210193\">SATISH KUMAR NARAYANASETTI (E5)<\/option>"
+
+Line 105:
+  create-gatepass.php:      "                                                $prepstmtOfficial->execute();"
+  create-gatepass copy.php: "                                                <option value=\"6006078\">DINDI GOWRI SANKAR (E5)<\/option>"
+
+Line 106:
+  create-gatepass.php:      "                                                while ($official = $prepstmtOfficial->fetch(PDO::FETCH_OBJ)) {"
+  create-gatepass copy.php: "                                                <option value=\"6063438\">LAKSHMI NARAYANA PRAKHYA (E5)<\/option>"
+
+Line 107:
+  create-gatepass.php:      "                                                    $displayName = strtoupper($official->HOU_NAME);"
+  create-gatepass copy.php: "                                                <option value=\"2211076\">NOOKA RAJU VARRE (E4)<\/option>"
+
+Line 108:
+  create-gatepass.php:      "                                                    if (!empty($official->HOU_DESIGNATION)) {"
+  create-gatepass copy.php: "                                                <option value=\"6267017\">B VENU GOPAL (E4)<\/option>"
+
+Line 109:
+  create-gatepass.php:      "                                                        $displayName .= \" (\" . strtoupper($official->HOU_DESIGNATION) . \")\";"
+  create-gatepass copy.php: "                                                <option value=\"6268293\">N RAVI KUMAR (E4)<\/option>"
+
+Line 110:
+  create-gatepass.php:      "                                                    }"
+  create-gatepass copy.php: "                                                <option value=\"6269079\">D NARASIMHA MURTHY (E4)<\/option>"
+
+Line 111:
+  create-gatepass.php:      "                                                    echo \"<option value='\" . htmlspecialchars($official->HOU_ID) . \"'>\" . htmlspecialchars($displayName) . \"<\/option>\";"
+  create-gatepass copy.php: "                                                <option value=\"6193501\">BISWAJIT RATH (E4)<\/option>"
+
+Line 112:
+  create-gatepass.php:      "                                                }"
+  create-gatepass copy.php: "                                                <option value=\"2768038\">D VENUGOPALA RAO (E2)<\/option>"
+
+Line 113:
+  create-gatepass.php:      "                                                ?>"
+  create-gatepass copy.php: "                                            <\/select>"
+
+Line 114:
+  create-gatepass.php:      "                                            <\/select>"
+  create-gatepass copy.php: "                                            <label for=\"bhelOfficial\">BHEL Official<\/label>"
+
+Line 115:
+  create-gatepass.php:      "                                            <label for=\"bhelOfficial\">BHEL Official<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 116:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 117:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 118:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+
+Line 119:
+  create-gatepass.php:      "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+  create-gatepass copy.php: "                                            <input class=\"form-control form-control-sm\" id=\"sourceFrom\" name=\"sourceFrom\""
+
+Line 120:
+  create-gatepass.php:      "                                            <input class=\"form-control form-control-sm\" id=\"sourceFrom\" name=\"sourceFrom\""
+  create-gatepass copy.php: "                                                type=\"text\" placeholder=\"Source \/ From\" required \/>"
+
+Line 121:
+  create-gatepass.php:      "                                                type=\"text\" placeholder=\"Source \/ From\" required \/>"
+  create-gatepass copy.php: "                                            <label for=\"sourceFrom\">Source \/ From<\/label>"
+
+Line 122:
+  create-gatepass.php:      "                                            <label for=\"sourceFrom\">Source \/ From<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 123:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 124:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 125:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating\">"
+
+Line 126:
+  create-gatepass.php:      "                                        <div class=\"form-floating\">"
+  create-gatepass copy.php: "                                            <input class=\"form-control form-control-sm\" id=\"destinationTo\" name=\"destinationTo\""
+
+Line 127:
+  create-gatepass.php:      "                                            <input class=\"form-control form-control-sm\" id=\"destinationTo\" name=\"destinationTo\""
+  create-gatepass copy.php: "                                                type=\"text\" placeholder=\"Destination \/ To\" required \/>"
+
+Line 128:
+  create-gatepass.php:      "                                                type=\"text\" placeholder=\"Destination \/ To\" required \/>"
+  create-gatepass copy.php: "                                            <label for=\"destinationTo\">Destination \/ To<\/label>"
+
+Line 129:
+  create-gatepass.php:      "                                            <label for=\"destinationTo\">Destination \/ To<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 130:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 131:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 132:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                                <div class=\"row mb-3\">"
+
+Line 133:
+  create-gatepass.php:      "                                <div class=\"row mb-3\">"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 134:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+
+Line 135:
+  create-gatepass.php:      "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+  create-gatepass copy.php: "                                            <input class=\"form-control form-control-sm\" id=\"date\" name=\"date\" type=\"date\""
+
+Line 136:
+  create-gatepass.php:      "                                            <input class=\"form-control form-control-sm\" id=\"date\" name=\"date\" type=\"date\""
+  create-gatepass copy.php: "                                                placeholder=\"Date\" required \/>"
+
+Line 137:
+  create-gatepass.php:      "                                                placeholder=\"Date\" min=\"<?php echo date('Y-m-d'); ?>\" required \/>"
+  create-gatepass copy.php: "                                            <label for=\"date\">Date<\/label>"
+
+Line 138:
+  create-gatepass.php:      "                                            <label for=\"date\">Date<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 139:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 140:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 141:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating\">"
+
+Line 142:
+  create-gatepass.php:      "                                        <div class=\"form-floating\">"
+  create-gatepass copy.php: "                                            <input class=\"form-control form-control-sm\" id=\"returnDate\" name=\"returnDate\""
+
+Line 143:
+  create-gatepass.php:      "                                            <input class=\"form-control form-control-sm\" id=\"returnDate\" name=\"returnDate\""
+  create-gatepass copy.php: "                                                type=\"date\" placeholder=\"Expected Date of Return\" required \/>"
+
+Line 144:
+  create-gatepass.php:      "                                                type=\"date\" placeholder=\"Expected Date of Return\" min=\"<?php echo date('Y-m-d', strtotime('+1 day')); ?>\" required \/>"
+  create-gatepass copy.php: "                                            <label for=\"returnDate\">Expected Date of Return<\/label>"
+
+Line 145:
+  create-gatepass.php:      "                                            <label for=\"returnDate\">Expected Date of Return<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 146:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 147:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 148:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+
+Line 149:
+  create-gatepass.php:      "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+  create-gatepass copy.php: "                                            <input class=\"form-control form-control-sm\" id=\"purpose\" name=\"purpose\" type=\"text\""
+
+Line 150:
+  create-gatepass.php:      "                                            <input class=\"form-control form-control-sm\" id=\"purpose\" name=\"purpose\" type=\"text\""
+  create-gatepass copy.php: "                                                placeholder=\"Purpose\" required \/>"
+
+Line 151:
+  create-gatepass.php:      "                                                placeholder=\"Purpose\" required \/>"
+  create-gatepass copy.php: "                                            <label for=\"purpose\">Purpose<\/label>"
+
+Line 152:
+  create-gatepass.php:      "                                            <label for=\"purpose\">Purpose<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 153:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 154:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-3\">"
+
+Line 155:
+  create-gatepass.php:      "                                    <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+
+Line 156:
+  create-gatepass.php:      "                                        <div class=\"form-floating mb-3 mb-md-0\">"
+  create-gatepass copy.php: "                                            <select class=\"form-select form-select-sm ps-3\" id=\"materialOwner\""
+
+Line 157:
+  create-gatepass.php:      "                                            <select class=\"form-select form-select-sm ps-3\" id=\"materialOwner\""
+  create-gatepass copy.php: "                                                name=\"materialOwner\" required>"
+
+Line 158:
+  create-gatepass.php:      "                                                name=\"materialOwner\" required>"
+  create-gatepass copy.php: "                                                <option value=\"\">SELECT<\/option>"
+
+Line 159:
+  create-gatepass.php:      "                                                <option value=\"\">SELECT<\/option>"
+  create-gatepass copy.php: "                                                <option value=\"BHEL-HPVP\">BHEL-HPVP<\/option>"
+
+Line 160:
+  create-gatepass.php:      "                                                <option value=\"BHEL-HPVP\">BHEL-HPVP<\/option>"
+  create-gatepass copy.php: "                                                <option value=\"Vendor\">Vendor<\/option>"
+
+Line 161:
+  create-gatepass.php:      "                                                <option value=\"Vendor\">Vendor<\/option>"
+  create-gatepass copy.php: "                                            <\/select>"
+
+Line 162:
+  create-gatepass.php:      "                                            <\/select>"
+  create-gatepass copy.php: "                                            <label for=\"materialOwner\">Material Owner<\/label>"
+
+Line 163:
+  create-gatepass.php:      "                                            <label for=\"materialOwner\">Material Owner<\/label>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 164:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 165:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 166:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                                <div class=\"row mb-3\">"
+
+Line 167:
+  create-gatepass.php:      "                                <div class=\"row mb-3\">"
+  create-gatepass copy.php: "                                    <div class=\"col-md-12 text-center\">"
+
+Line 168:
+  create-gatepass.php:      "                                    <div class=\"col-md-12 text-center\">"
+  create-gatepass copy.php: "                                        <h4>ITEMS<\/h4>"
+
+Line 169:
+  create-gatepass.php:      "                                        <h4>ITEMS<\/h4>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 170:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 171:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                                <div id=\"itemsContainer\">"
+
+Line 172:
+  create-gatepass.php:      "                                <div id=\"itemsContainer\">"
+  create-gatepass copy.php: "                                    <div class=\"row mb-3 item-row\">"
+
+Line 173:
+  create-gatepass.php:      "                                    <div class=\"row mb-3 item-row\">"
+  create-gatepass copy.php: "                                        <div class=\"col-md-5\">"
+
+Line 174:
+  create-gatepass.php:      "                                        <div class=\"col-md-5\">"
+  create-gatepass copy.php: "                                            <div class=\"form-floating mb-3 mb-md-0\">"
+
+Line 175:
+  create-gatepass.php:      "                                            <div class=\"form-floating mb-3 mb-md-0\">"
+  create-gatepass copy.php: "                                                <input class=\"form-control form-control-sm item-desc\" id=\"itemDescription1\""
+
+Line 176:
+  create-gatepass.php:      "                                                <input class=\"form-control form-control-sm item-desc\" name=\"itemDescription[]\""
+  create-gatepass copy.php: "                                                    name=\"itemDescription1\" type=\"text\" placeholder=\"Item Description\" required \/>"
+
+Line 177:
+  create-gatepass.php:      "                                                    type=\"text\" placeholder=\"Item Description\" required id=\"desc_1\" \/>"
+  create-gatepass copy.php: "                                                <label for=\"itemDescription1\" class=\"item-desc-label\">1. Item Description<\/label>"
+
+Line 178:
+  create-gatepass.php:      "                                                <label for=\"desc_1\" class=\"item-desc-label\">1. Item Description<\/label>"
+  create-gatepass copy.php: "                                            <\/div>"
+
+Line 179:
+  create-gatepass.php:      "                                            <\/div>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 180:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                        <div class=\"col-md-3\">"
+
+Line 181:
+  create-gatepass.php:      "                                        <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                            <div class=\"form-floating\">"
+
+Line 182:
+  create-gatepass.php:      "                                            <div class=\"form-floating\">"
+  create-gatepass copy.php: "                                                <input class=\"form-control form-control-sm item-qty\" id=\"itemQuantity1\" name=\"itemQuantity1\""
+
+Line 183:
+  create-gatepass.php:      "                                                <input class=\"form-control form-control-sm item-qty\" name=\"itemQuantity[]\""
+  create-gatepass copy.php: "                                                    type=\"number\" placeholder=\"Item Quantity\" required \/>"
+
+Line 184:
+  create-gatepass.php:      "                                                    type=\"number\" placeholder=\"Item Quantity\" required id=\"qty_1\" \/>"
+  create-gatepass copy.php: "                                                <label for=\"itemQuantity1\" class=\"item-qty-label\">1. Item Quantity<\/label>"
+
+Line 185:
+  create-gatepass.php:      "                                                <label for=\"qty_1\" class=\"item-qty-label\">1. Item Quantity<\/label>"
+  create-gatepass copy.php: "                                            <\/div>"
+
+Line 186:
+  create-gatepass.php:      "                                            <\/div>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 187:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                        <div class=\"col-md-3\">"
+
+Line 188:
+  create-gatepass.php:      "                                        <div class=\"col-md-3\">"
+  create-gatepass copy.php: "                                            <div class=\"form-floating\">"
+
+Line 189:
+  create-gatepass.php:      "                                            <div class=\"form-floating\">"
+  create-gatepass copy.php: "                                                <input class=\"form-control form-control-sm item-uom\" id=\"uom1\" name=\"uom1\" type=\"text\""
+
+Line 190:
+  create-gatepass.php:      "                                                <input class=\"form-control form-control-sm item-uom\" name=\"uom[]\" type=\"text\""
+  create-gatepass copy.php: "                                                    placeholder=\"UOM\" required \/>"
+
+Line 191:
+  create-gatepass.php:      "                                                    placeholder=\"UOM\" required id=\"uom_1\" \/>"
+  create-gatepass copy.php: "                                                <label for=\"uom1\" class=\"item-uom-label\">1. UOM<\/label>"
+
+Line 192:
+  create-gatepass.php:      "                                                <label for=\"uom_1\" class=\"item-uom-label\">1. UOM<\/label>"
+  create-gatepass copy.php: "                                            <\/div>"
+
+Line 193:
+  create-gatepass.php:      "                                            <\/div>"
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 194:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                        <div class=\"col-md-1 d-flex align-items-center\">"
+
+Line 195:
+  create-gatepass.php:      "                                        <div class=\"col-md-1 d-flex align-items-center\">"
+  create-gatepass copy.php: "                                            <button type=\"button\" class=\"btn btn-danger btn-sm remove-item-btn\" style=\"display:none;\" title=\"Remove Item\"><i class=\"fas fa-trash\"><\/i><\/button>"
+
+Line 196:
+  create-gatepass.php:      "                                            <button type=\"button\" class=\"btn btn-danger btn-sm remove-item-btn\""
+  create-gatepass copy.php: "                                        <\/div>"
+
+Line 197:
+  create-gatepass.php:      "                                                style=\"display:none;\" title=\"Remove Item\"><i class=\"fas fa-trash\"><\/i><\/button>"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 198:
+  create-gatepass.php:      "                                        <\/div>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 199:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                                <div class=\"row mb-3\">"
+
+Line 200:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                                    <div class=\"col-md-12 text-end\">"
+
+Line 201:
+  create-gatepass.php:      "                                <div class=\"row mb-3\">"
+  create-gatepass copy.php: "                                        <button type=\"button\" class=\"btn btn-success btn-sm\" id=\"addItemBtn\">"
+
+Line 202:
+  create-gatepass.php:      "                                    <div class=\"col-md-12 text-end\">"
+  create-gatepass copy.php: "                                            <i class=\"fas fa-plus\"><\/i> Add Item"
+
+Line 203:
+  create-gatepass.php:      "                                        <button type=\"button\" class=\"btn btn-success btn-sm\" id=\"addItemBtn\">"
+  create-gatepass copy.php: "                                        <\/button>"
+
+Line 204:
+  create-gatepass.php:      "                                            <i class=\"fas fa-plus\"><\/i> Add Item"
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 205:
+  create-gatepass.php:      "                                        <\/button>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 206:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: ""
+
+Line 207:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                                <div class=\"mt-4 mb-0\">"
+
+Line 208:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                    <div class=\"d-grid\">"
+
+Line 209:
+  create-gatepass.php:      "                                <div class=\"mt-4 mb-0\">"
+  create-gatepass copy.php: "                                        <input class=\"btn btn-primary btn-block\" type=\"submit\""
+
+Line 210:
+  create-gatepass.php:      "                                    <div class=\"d-grid\">"
+  create-gatepass copy.php: "                                            value=\"Create Material Gatepass\" \/>"
+
+Line 211:
+  create-gatepass.php:      "                                        <input class=\"btn btn-primary btn-block\" type=\"submit\""
+  create-gatepass copy.php: "                                    <\/div>"
+
+Line 212:
+  create-gatepass.php:      "                                            value=\"Create Material Gatepass\" \/>"
+  create-gatepass copy.php: "                                <\/div>"
+
+Line 213:
+  create-gatepass.php:      "                                    <\/div>"
+  create-gatepass copy.php: "                            <\/form>"
+
+Line 214:
+  create-gatepass.php:      "                                <\/div>"
+  create-gatepass copy.php: "                            <?php"
+
+Line 215:
+  create-gatepass.php:      "                            <\/form>"
+  create-gatepass copy.php: "                        } else {"
+
+Line 216:
+  create-gatepass.php:      "                            <?php"
+  create-gatepass copy.php: "                            $vendorCode = $_POST[\"vendorCode\"];"
+
+Line 217:
+  create-gatepass.php:      "                        } else {"
+  create-gatepass copy.php: "                            $vendorName = $_POST[\"vendorName\"];"
+
+Line 218:
+  create-gatepass.php:      "                            $vendorCode = $_POST[\"vendorCode\"];"
+  create-gatepass copy.php: "                            $repName = $_POST[\"repName\"];"
+
+Line 219:
+  create-gatepass.php:      "                            $vendorName = $_POST[\"vendorName\"];"
+  create-gatepass copy.php: "                            $repID = $_POST[\"repID\"];"
+
+Line 220:
+  create-gatepass.php:      "                            $repName = $_POST[\"repName\"];"
+  create-gatepass copy.php: "                            $osPO = $_POST[\"osPO\"];"
+
+Line 221:
+  create-gatepass.php:      "                            $repID = $_POST[\"repID\"];"
+  create-gatepass copy.php: "                            $bhelOfficial = $_POST[\"bhelOfficial\"];"
+
+Line 222:
+  create-gatepass.php:      "                            $osPO = $_POST[\"osPO\"];"
+  create-gatepass copy.php: "                            $sourceFrom = $_POST[\"sourceFrom\"];"
+
+Line 223:
+  create-gatepass.php:      "                            $bhelOfficial = $_POST[\"bhelOfficial\"];"
+  create-gatepass copy.php: "                            $destinationTo = $_POST[\"destinationTo\"];"
+
+Line 224:
+  create-gatepass.php:      "                            $sourceFrom = $_POST[\"sourceFrom\"];"
+  create-gatepass copy.php: "                            $passDate = $_POST[\"date\"];"
+
+Line 225:
+  create-gatepass.php:      "                            $destinationTo = $_POST[\"destinationTo\"];"
+  create-gatepass copy.php: "                            $returnDate = $_POST[\"returnDate\"];"
+
+Line 226:
+  create-gatepass.php:      "                            $passDate = $_POST[\"date\"];"
+  create-gatepass copy.php: "                            $purpose = $_POST[\"purpose\"];"
+
+Line 227:
+  create-gatepass.php:      "                            $returnDate = $_POST[\"returnDate\"];"
+  create-gatepass copy.php: "                            $itemDescription1 = $_POST[\"itemDescription1\"];"
+
+Line 228:
+  create-gatepass.php:      "                            $purpose = $_POST[\"purpose\"];"
+  create-gatepass copy.php: "                            $itemQuantity1 = $_POST[\"itemQuantity1\"];"
+
+Line 229:
+  create-gatepass.php:      "                            $materialOwner = $_POST[\"materialOwner\"];"
+  create-gatepass copy.php: "                            $uom1 = $_POST[\"uom1\"];"
+
+Line 230:
+  create-gatepass.php:      "                            $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN';"
+  create-gatepass copy.php: "                            $itemDescription2 = (trim($_POST[\"itemDescription2\"] ?? '') === '') ? null : trim($_POST[\"itemDescription2\"] ?? '');"
+
+Line 231:
+  create-gatepass.php:      "                            $hostName = gethostbyaddr($ipAddress) ?: 'UNKNOWN';"
+  create-gatepass copy.php: "                            $itemQuantity2 = (trim($_POST[\"itemQuantity2\"] ?? '') === '') ? null : (int) trim($_POST[\"itemQuantity2\"] ?? '');"
+
+Line 232:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            $uom2 = (trim($_POST[\"uom2\"] ?? '') === '') ? null : trim($_POST[\"uom2\"] ?? '');"
+
+Line 233:
+  create-gatepass.php:      "                            $today = date('Y-m-d');"
+  create-gatepass copy.php: "                            $itemDescription3 = (trim($_POST[\"itemDescription3\"] ?? '') === '') ? null : trim($_POST[\"itemDescription3\"] ?? '');"
+
+Line 234:
+  create-gatepass.php:      "                            $errors = [];"
+  create-gatepass copy.php: "                            $itemQuantity3 = (trim($_POST[\"itemQuantity3\"] ?? '') === '') ? null : (int) trim($_POST[\"itemQuantity3\"] ?? '');"
+
+Line 235:
+  create-gatepass.php:      "                            if ($passDate < $today) {"
+  create-gatepass copy.php: "                            $uom3 = (trim($_POST[\"uom3\"] ?? '') === '') ? null : trim($_POST[\"uom3\"] ?? '');"
+
+Line 236:
+  create-gatepass.php:      "                                $errors[] = \"Gatepass Date must be today or in the future.\";"
+  create-gatepass copy.php: "                            $itemDescription4 = (trim($_POST[\"itemDescription4\"] ?? '') === '') ? null : trim($_POST[\"itemDescription4\"] ?? '');"
+
+Line 237:
+  create-gatepass.php:      "                            }"
+  create-gatepass copy.php: "                            $itemQuantity4 = (trim($_POST[\"itemQuantity4\"] ?? '') === '') ? null : (int) trim($_POST[\"itemQuantity4\"] ?? '');"
+
+Line 238:
+  create-gatepass.php:      "                            if ($returnDate <= $today) {"
+  create-gatepass copy.php: "                            $uom4 = (trim($_POST[\"uom4\"] ?? '') === '') ? null : trim($_POST[\"uom4\"] ?? '');"
+
+Line 239:
+  create-gatepass.php:      "                                $errors[] = \"Expected Date of Return must be ahead of today's date.\";"
+  create-gatepass copy.php: ""
+
+Line 240:
+  create-gatepass.php:      "                            }"
+  create-gatepass copy.php: "                            $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN';"
+
+Line 241:
+  create-gatepass.php:      "                            if ($returnDate <= $passDate) {"
+  create-gatepass copy.php: "                            $hostName = gethostbyaddr($ipAddress) ?: 'UNKNOWN';"
+
+Line 242:
+  create-gatepass.php:      "                                $errors[] = \"Expected Date of Return must be after Gatepass Date.\";"
+  create-gatepass copy.php: ""
+
+Line 243:
+  create-gatepass.php:      "                            }"
+  create-gatepass copy.php: "                            $statement = $dBhandler->prepare(\"INSERT INTO HPVP_OSGP ("
+
+Line 244:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                                                    HO_VENDOR_CODE        ,"
+
+Line 245:
+  create-gatepass.php:      "                            if (!empty($errors)) {"
+  create-gatepass copy.php: "                                                                    HO_VENDOR_NAME        ,"
+
+Line 246:
+  create-gatepass.php:      "                                foreach ($errors as $error) {"
+  create-gatepass copy.php: "                                                                    HO_REPRESENTATIVE_NAME,"
+
+Line 247:
+  create-gatepass.php:      "                                    echo \"<h4 class='text-danger'>Error: \" . htmlspecialchars($error) . \"<\/h4>\";"
+  create-gatepass copy.php: "                                                                    HO_REPRESENTATIVE_ID  ,"
+
+Line 248:
+  create-gatepass.php:      "                                }"
+  create-gatepass copy.php: "                                                                    HO_ORDER              ,"
+
+Line 249:
+  create-gatepass.php:      "                                echo \"<p><a href='create-gatepass.php' class='btn btn-primary btn-sm mt-2'>Go Back<\/a><\/p>\";"
+  create-gatepass copy.php: "                                                                    HO_BHEL_OFFICIAL      ,"
+
+Line 250:
+  create-gatepass.php:      "                            } else {"
+  create-gatepass copy.php: "                                                                    HO_SOURCE_FROM        ,"
+
+Line 251:
+  create-gatepass.php:      "                                $executeValues = array("
+  create-gatepass copy.php: "                                                                    HO_DESTINATION_TO     ,"
+
+Line 252:
+  create-gatepass.php:      "                                    \"vendorCode\" => $vendorCode,"
+  create-gatepass copy.php: "                                                                    HO_DATE               ,"
+
+Line 253:
+  create-gatepass.php:      "                                    \"vendorName\" => $vendorName,"
+  create-gatepass copy.php: "                                                                    HO_DATE_RETURN        ,"
+
+Line 254:
+  create-gatepass.php:      "                                    \"repName\" => $repName,"
+  create-gatepass copy.php: "                                                                    HO_PURPOSE            ,"
+
+Line 255:
+  create-gatepass.php:      "                                    \"repID\" => $repID,"
+  create-gatepass copy.php: "                                                                    HO_DESCRIPTION_1      ,"
+
+Line 256:
+  create-gatepass.php:      "                                    \"osPO\" => $osPO,"
+  create-gatepass copy.php: "                                                                    HO_QUANTITY_1         ,"
+
+Line 257:
+  create-gatepass.php:      "                                    \"bhelOfficial\" => $bhelOfficial,"
+  create-gatepass copy.php: "                                                                    HO_UOM_1              ,"
+
+Line 258:
+  create-gatepass.php:      "                                    \"sourceFrom\" => $sourceFrom,"
+  create-gatepass copy.php: "                                                                    HO_DESCRIPTION_2      ,"
+
+Line 259:
+  create-gatepass.php:      "                                    \"destinationTo\" => $destinationTo,"
+  create-gatepass copy.php: "                                                                    HO_QUANTITY_2         ,"
+
+Line 260:
+  create-gatepass.php:      "                                    \"passDate\" => $passDate,"
+  create-gatepass copy.php: "                                                                    HO_UOM_2              ,"
+
+Line 261:
+  create-gatepass.php:      "                                    \"returnDate\" => $returnDate,"
+  create-gatepass copy.php: "                                                                    HO_DESCRIPTION_3      ,"
+
+Line 262:
+  create-gatepass.php:      "                                    \"purpose\" => $purpose,"
+  create-gatepass copy.php: "                                                                    HO_QUANTITY_3         ,"
+
+Line 263:
+  create-gatepass.php:      "                                    \"materialOwner\" => $materialOwner,"
+  create-gatepass copy.php: "                                                                    HO_UOM_3              ,"
+
+Line 264:
+  create-gatepass.php:      "                                    \"ipAddress\" => $ipAddress,"
+  create-gatepass copy.php: "                                                                    HO_DESCRIPTION_4      ,"
+
+Line 265:
+  create-gatepass.php:      "                                    \"hostName\" => $hostName,"
+  create-gatepass copy.php: "                                                                    HO_QUANTITY_4         ,"
+
+Line 266:
+  create-gatepass.php:      "                                );"
+  create-gatepass copy.php: "                                                                    HO_UOM_4              ,"
+
+Line 267:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                                                    HO_STATUS             ,"
+
+Line 268:
+  create-gatepass.php:      "                                $statement = $dBhandler->prepare(\"INSERT INTO HPVP_OSGP ("
+  create-gatepass copy.php: "                                                                    HO_IP_ADDRESS         ,"
+
+Line 269:
+  create-gatepass.php:      "                                                                        HO_VENDOR_CODE        ,"
+  create-gatepass copy.php: "                                                                    HO_HOSTNAME           ,"
+
+Line 270:
+  create-gatepass.php:      "                                                                        HO_VENDOR_NAME        ,"
+  create-gatepass copy.php: "                                                                    HO_LAST_UPDATE"
+
+Line 271:
+  create-gatepass.php:      "                                                                        HO_REPRESENTATIVE_NAME,"
+  create-gatepass copy.php: "                                                                ) VALUES ("
+
+Line 272:
+  create-gatepass.php:      "                                                                        HO_REPRESENTATIVE_ID  ,"
+  create-gatepass copy.php: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t:vendorCode,"
+
+Line 273:
+  create-gatepass.php:      "                                                                        HO_ORDER              ,"
+  create-gatepass copy.php: "                                                                    :vendorName,"
+
+Line 274:
+  create-gatepass.php:      "                                                                        HO_BHEL_OFFICIAL      ,"
+  create-gatepass copy.php: "                                                                    :repName,"
+
+Line 275:
+  create-gatepass.php:      "                                                                        HO_SOURCE_FROM        ,"
+  create-gatepass copy.php: "                                                                    :repID,"
+
+Line 276:
+  create-gatepass.php:      "                                                                        HO_DESTINATION_TO     ,"
+  create-gatepass copy.php: "                                                                    :osPO,"
+
+Line 277:
+  create-gatepass.php:      "                                                                        HO_DATE               ,"
+  create-gatepass copy.php: "                                                                    :bhelOfficial,"
+
+Line 278:
+  create-gatepass.php:      "                                                                        HO_DATE_RETURN        ,"
+  create-gatepass copy.php: "                                                                    :sourceFrom,"
+
+Line 279:
+  create-gatepass.php:      "                                                                        HO_PURPOSE            ,"
+  create-gatepass copy.php: "                                                                    :destinationTo,"
+
+Line 280:
+  create-gatepass.php:      "                                                                        HO_MATERIAL_OWNER     ,"
+  create-gatepass copy.php: "                                                                    :passDate,"
+
+Line 281:
+  create-gatepass.php:      "                                                                        HO_STATUS             ,"
+  create-gatepass copy.php: "                                                                    :returnDate,"
+
+Line 282:
+  create-gatepass.php:      "                                                                        HO_IP_ADDRESS         ,"
+  create-gatepass copy.php: "                                                                    :purpose,"
+
+Line 283:
+  create-gatepass.php:      "                                                                        HO_HOSTNAME           ,"
+  create-gatepass copy.php: "                                                                    :itemDescription1,"
+
+Line 284:
+  create-gatepass.php:      "                                                                        HO_TIME_CREATED"
+  create-gatepass copy.php: "                                                                    :itemQuantity1,"
+
+Line 285:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                                                    :uom1,"
+
+Line 286:
+  create-gatepass.php:      "                                                                    ) VALUES ("
+  create-gatepass copy.php: "                                                                    :itemDescription2,"
+
+Line 287:
+  create-gatepass.php:      " \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t    :vendorCode,"
+  create-gatepass copy.php: "                                                                    :itemQuantity2,"
+
+Line 288:
+  create-gatepass.php:      "                                                                        :vendorName,"
+  create-gatepass copy.php: "                                                                    :uom2,"
+
+Line 289:
+  create-gatepass.php:      "                                                                        :repName,"
+  create-gatepass copy.php: "                                                                    :itemDescription3,"
+
+Line 290:
+  create-gatepass.php:      "                                                                        :repID,"
+  create-gatepass copy.php: "                                                                    :itemQuantity3,"
+
+Line 291:
+  create-gatepass.php:      "                                                                        :osPO,"
+  create-gatepass copy.php: "                                                                    :uom3,"
+
+Line 292:
+  create-gatepass.php:      "                                                                        :bhelOfficial,"
+  create-gatepass copy.php: "                                                                    :itemDescription4,"
+
+Line 293:
+  create-gatepass.php:      "                                                                        :sourceFrom,"
+  create-gatepass copy.php: "                                                                    :itemQuantity4,"
+
+Line 294:
+  create-gatepass.php:      "                                                                        :destinationTo,"
+  create-gatepass copy.php: "                                                                    :uom4,"
+
+Line 295:
+  create-gatepass.php:      "                                                                        :passDate,"
+  create-gatepass copy.php: "                                                                    'IR',"
+
+Line 296:
+  create-gatepass.php:      "                                                                        :returnDate,"
+  create-gatepass copy.php: "                                                                    :ipAddress,"
+
+Line 297:
+  create-gatepass.php:      "                                                                        :purpose,"
+  create-gatepass copy.php: "                                                                    :hostName,"
+
+Line 298:
+  create-gatepass.php:      "                                                                        :materialOwner,"
+  create-gatepass copy.php: "                                                                    NOW()"
+
+Line 299:
+  create-gatepass.php:      "                                                                        'GATEPASS_REQUESTED',"
+  create-gatepass copy.php: "                                                                )\");"
+
+Line 300:
+  create-gatepass.php:      "                                                                        :ipAddress,"
+  create-gatepass copy.php: ""
+
+Line 301:
+  create-gatepass.php:      "                                                                        :hostName,"
+  create-gatepass copy.php: "                            $statement->execute(array("
+
+Line 302:
+  create-gatepass.php:      "                                                                        NOW()"
+  create-gatepass copy.php: "                                \"vendorCode\" => $vendorCode,"
+
+Line 303:
+  create-gatepass.php:      "                                                                    )\");"
+  create-gatepass copy.php: "                                \"vendorName\" => $vendorName,"
+
+Line 304:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                \"repName\" => $repName,"
+
+Line 305:
+  create-gatepass.php:      "                                $statement->execute($executeValues);"
+  create-gatepass copy.php: "                                \"repID\" => $repID,"
+
+Line 306:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                \"osPO\" => $osPO,"
+
+Line 307:
+  create-gatepass.php:      "                                if ($statement->rowCount() > 0) {"
+  create-gatepass copy.php: "                                \"bhelOfficial\" => $bhelOfficial,"
+
+Line 308:
+  create-gatepass.php:      "                                    $gatepassId = $dBhandler->lastInsertId();"
+  create-gatepass copy.php: "                                \"sourceFrom\" => $sourceFrom,"
+
+Line 309:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                \"destinationTo\" => $destinationTo,"
+
+Line 310:
+  create-gatepass.php:      "                                    $itemStatement = $dBhandler->prepare(\"INSERT INTO hpvp_osgp_item ("
+  create-gatepass copy.php: "                                \"passDate\" => $passDate,"
+
+Line 311:
+  create-gatepass.php:      "                                        HOI_GATEPASS_SLNO,"
+  create-gatepass copy.php: "                                \"returnDate\" => $returnDate,"
+
+Line 312:
+  create-gatepass.php:      "                                        HOI_ITEM_SLNO,"
+  create-gatepass copy.php: "                                \"purpose\" => $purpose,"
+
+Line 313:
+  create-gatepass.php:      "                                        HOI_ITEM_DESCRIPTION,"
+  create-gatepass copy.php: "                                \"itemDescription1\" => $itemDescription1,"
+
+Line 314:
+  create-gatepass.php:      "                                        HOI_ITEM_QUANTITY,"
+  create-gatepass copy.php: "                                \"itemQuantity1\" => $itemQuantity1,"
+
+Line 315:
+  create-gatepass.php:      "                                        HOI_ITEM_UOM"
+  create-gatepass copy.php: "                                \"uom1\" => $uom1,"
+
+Line 316:
+  create-gatepass.php:      "                                    ) VALUES ("
+  create-gatepass copy.php: "                                \"itemDescription2\" => $itemDescription2,"
+
+Line 317:
+  create-gatepass.php:      "                                        :gatepassId,"
+  create-gatepass copy.php: "                                \"itemQuantity2\" => $itemQuantity2,"
+
+Line 318:
+  create-gatepass.php:      "                                        :itemSlno,"
+  create-gatepass copy.php: "                                \"uom2\" => $uom2,"
+
+Line 319:
+  create-gatepass.php:      "                                        :itemDesc,"
+  create-gatepass copy.php: "                                \"itemDescription3\" => $itemDescription3,"
+
+Line 320:
+  create-gatepass.php:      "                                        :itemQty,"
+  create-gatepass copy.php: "                                \"itemQuantity3\" => $itemQuantity3,"
+
+Line 321:
+  create-gatepass.php:      "                                        :itemUom"
+  create-gatepass copy.php: "                                \"uom3\" => $uom3,"
+
+Line 322:
+  create-gatepass.php:      "                                    )\");"
+  create-gatepass copy.php: "                                \"itemDescription4\" => $itemDescription4,"
+
+Line 323:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                                \"itemQuantity4\" => $itemQuantity4,"
+
+Line 324:
+  create-gatepass.php:      "                                    $descriptions = $_POST['itemDescription'] ?? [];"
+  create-gatepass copy.php: "                                \"uom4\" => $uom4,"
+
+Line 325:
+  create-gatepass.php:      "                                    $quantities = $_POST['itemQuantity'] ?? [];"
+  create-gatepass copy.php: "                                \"ipAddress\" => $ipAddress,"
+
+Line 326:
+  create-gatepass.php:      "                                    $uoms = $_POST['uom'] ?? [];"
+  create-gatepass copy.php: "                                \"hostName\" => $hostName,"
+
+Line 327:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            ));"
+
+Line 328:
+  create-gatepass.php:      "                                    $count = min(count($descriptions), 25);"
+  create-gatepass copy.php: ""
+
+Line 329:
+  create-gatepass.php:      "                                    for ($i = 0; $i < $count; $i++) {"
+  create-gatepass copy.php: "                            if ($statement->rowCount() > 0) {"
+
+Line 330:
+  create-gatepass.php:      "                                        $desc = trim($descriptions[$i] ?? '');"
+  create-gatepass copy.php: "                                echo \"<h3 class='text-primary'>Gatepass Created. Check in <a href='history.php'>History<\/a>.<\/h3>\";"
+
+Line 331:
+  create-gatepass.php:      "                                        $qty = trim($quantities[$i] ?? '');"
+  create-gatepass copy.php: "                            }"
+
+Line 332:
+  create-gatepass.php:      "                                        $uom = trim($uoms[$i] ?? '');"
+  create-gatepass copy.php: "                        }"
+
+Line 333:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                        ?>"
+
+Line 334:
+  create-gatepass.php:      "                                        if ($desc !== '') {"
+  create-gatepass copy.php: "                    <\/div>"
+
+Line 335:
+  create-gatepass.php:      "                                            $itemStatement->execute(["
+  create-gatepass copy.php: "                <\/main>"
+
+Line 336:
+  create-gatepass.php:      "                                                'gatepassId' => $gatepassId,"
+  create-gatepass copy.php: "                <footer class=\"py-4 bg-light mt-auto\">"
+
+Line 337:
+  create-gatepass.php:      "                                                'itemSlno' => $i + 1,"
+  create-gatepass copy.php: "                    <?php include 'footer.php' ?>"
+
+Line 338:
+  create-gatepass.php:      "                                                'itemDesc' => $desc,"
+  create-gatepass copy.php: "                <\/footer>"
+
+Line 339:
+  create-gatepass.php:      "                                                'itemQty' => $qty !== '' ? (int) $qty : null,"
+  create-gatepass copy.php: "            <\/div>"
+
+Line 340:
+  create-gatepass.php:      "                                                'itemUom' => $uom !== '' ? $uom : null"
+  create-gatepass copy.php: "        <\/div>"
+
+Line 341:
+  create-gatepass.php:      "                                            ]);"
+  create-gatepass copy.php: "        <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.2.3\/dist\/js\/bootstrap.bundle.min.js\""
+
+Line 342:
+  create-gatepass.php:      "                                        }"
+  create-gatepass copy.php: "            crossorigin=\"anonymous\"><\/script>"
+
+Line 343:
+  create-gatepass.php:      "                                    }"
+  create-gatepass copy.php: "        <script src=\"js\/scripts.js\"><\/script>"
+
+Line 344:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "        <!--<script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/Chart.js\/2.8.0\/Chart.min.js\" crossorigin=\"anonymous\"><\/script>-->"
+
+Line 345:
+  create-gatepass.php:      "                                    echo \"<h3 class='text-primary'>Gatepass #\" . $gatepassId . \" Created. Check in <a href='history.php'>History<\/a>.<\/h3>\";"
+  create-gatepass copy.php: "        <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/simple-datatables@7.1.2\/dist\/umd\/simple-datatables.min.js\""
+
+Line 346:
+  create-gatepass.php:      "                                }"
+  create-gatepass copy.php: "            crossorigin=\"anonymous\"><\/script>"
+
+Line 347:
+  create-gatepass.php:      "                            }"
+  create-gatepass copy.php: "        <script src=\"js\/datatables-simple-demo.js\"><\/script>"
+
+Line 348:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "        <script>"
+
+Line 349:
+  create-gatepass.php:      "                        ?>"
+  create-gatepass copy.php: "            document.addEventListener('DOMContentLoaded', function() {"
+
+Line 350:
+  create-gatepass.php:      "                    <\/div>"
+  create-gatepass copy.php: "                const itemsContainer = document.getElementById('itemsContainer');"
+
+Line 351:
+  create-gatepass.php:      "                <\/main>"
+  create-gatepass copy.php: "                const addItemBtn = document.getElementById('addItemBtn');"
+
+Line 352:
+  create-gatepass.php:      "                <footer class=\"py-4 bg-light mt-auto\">"
+  create-gatepass copy.php: "                if(!itemsContainer || !addItemBtn) return;"
+
+Line 353:
+  create-gatepass.php:      "                    <?php include 'footer.php' ?>"
+  create-gatepass copy.php: "                const maxItems = 4;"
+
+Line 354:
+  create-gatepass.php:      "                <\/footer>"
+  create-gatepass copy.php: ""
+
+Line 355:
+  create-gatepass.php:      "            <\/div>"
+  create-gatepass copy.php: "                function updateItemIndices() {"
+
+Line 356:
+  create-gatepass.php:      "        <\/div>"
+  create-gatepass copy.php: "                    const rows = itemsContainer.querySelectorAll('.item-row');"
+
+Line 357:
+  create-gatepass.php:      "        <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.2.3\/dist\/js\/bootstrap.bundle.min.js\""
+  create-gatepass copy.php: "                    rows.forEach((row, index) => {"
+
+Line 358:
+  create-gatepass.php:      "            crossorigin=\"anonymous\"><\/script>"
+  create-gatepass copy.php: "                        const num = index + 1;"
+
+Line 359:
+  create-gatepass.php:      "        <script src=\"js\/scripts.js\"><\/script>"
+  create-gatepass copy.php: ""
+
+Line 360:
+  create-gatepass.php:      "        <!--<script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/Chart.js\/2.8.0\/Chart.min.js\" crossorigin=\"anonymous\"><\/script>-->"
+  create-gatepass copy.php: "                        const descInput = row.querySelector('.item-desc');"
+
+Line 361:
+  create-gatepass.php:      "        <script src=\"https:\/\/cdn.jsdelivr.net\/npm\/simple-datatables@7.1.2\/dist\/umd\/simple-datatables.min.js\""
+  create-gatepass copy.php: "                        const descLabel = row.querySelector('.item-desc-label');"
+
+Line 362:
+  create-gatepass.php:      "            crossorigin=\"anonymous\"><\/script>"
+  create-gatepass copy.php: "                        if(descInput) {"
+
+Line 363:
+  create-gatepass.php:      "        <script src=\"js\/datatables-simple-demo.js\"><\/script>"
+  create-gatepass copy.php: "                            descInput.name = `itemDescription${num}`;"
+
+Line 364:
+  create-gatepass.php:      "        <script>"
+  create-gatepass copy.php: "                            descInput.id = `itemDescription${num}`;"
+
+Line 365:
+  create-gatepass.php:      "            document.addEventListener('DOMContentLoaded', function () {"
+  create-gatepass copy.php: "                        }"
+
+Line 366:
+  create-gatepass.php:      "                const itemsContainer = document.getElementById('itemsContainer');"
+  create-gatepass copy.php: "                        if(descLabel) {"
+
+Line 367:
+  create-gatepass.php:      "                const addItemBtn = document.getElementById('addItemBtn');"
+  create-gatepass copy.php: "                            descLabel.setAttribute('for', `itemDescription${num}`);"
+
+Line 368:
+  create-gatepass.php:      "                if (!itemsContainer || !addItemBtn) return;"
+  create-gatepass copy.php: "                            descLabel.textContent = `${num}. Item Description`;"
+
+Line 369:
+  create-gatepass.php:      "                const maxItems = 25;"
+  create-gatepass copy.php: "                        }"
+
+Line 371:
+  create-gatepass.php:      "                function updateItemIndices() {"
+  create-gatepass copy.php: "                        const qtyInput = row.querySelector('.item-qty');"
+
+Line 372:
+  create-gatepass.php:      "                    const rows = itemsContainer.querySelectorAll('.item-row');"
+  create-gatepass copy.php: "                        const qtyLabel = row.querySelector('.item-qty-label');"
+
+Line 373:
+  create-gatepass.php:      "                    rows.forEach((row, index) => {"
+  create-gatepass copy.php: "                        if(qtyInput) {"
+
+Line 374:
+  create-gatepass.php:      "                        const num = index + 1;"
+  create-gatepass copy.php: "                            qtyInput.name = `itemQuantity${num}`;"
+
+Line 375:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            qtyInput.id = `itemQuantity${num}`;"
+
+Line 376:
+  create-gatepass.php:      "                        const descInput = row.querySelector('.item-desc');"
+  create-gatepass copy.php: "                        }"
+
+Line 377:
+  create-gatepass.php:      "                        const descLabel = row.querySelector('.item-desc-label');"
+  create-gatepass copy.php: "                        if(qtyLabel) {"
+
+Line 378:
+  create-gatepass.php:      "                        if (descInput) {"
+  create-gatepass copy.php: "                            qtyLabel.setAttribute('for', `itemQuantity${num}`);"
+
+Line 379:
+  create-gatepass.php:      "                            descInput.id = `desc_${num}`;"
+  create-gatepass copy.php: "                            qtyLabel.textContent = `${num}. Item Quantity`;"
+
+Line 381:
+  create-gatepass.php:      "                        if (descLabel) {"
+  create-gatepass copy.php: ""
+
+Line 382:
+  create-gatepass.php:      "                            descLabel.setAttribute('for', `desc_${num}`);"
+  create-gatepass copy.php: "                        const uomInput = row.querySelector('.item-uom');"
+
+Line 383:
+  create-gatepass.php:      "                            descLabel.textContent = `${num}. Item Description`;"
+  create-gatepass copy.php: "                        const uomLabel = row.querySelector('.item-uom-label');"
+
+Line 384:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                        if(uomInput) {"
+
+Line 385:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            uomInput.name = `uom${num}`;"
+
+Line 386:
+  create-gatepass.php:      "                        const qtyInput = row.querySelector('.item-qty');"
+  create-gatepass copy.php: "                            uomInput.id = `uom${num}`;"
+
+Line 387:
+  create-gatepass.php:      "                        const qtyLabel = row.querySelector('.item-qty-label');"
+  create-gatepass copy.php: "                        }"
+
+Line 388:
+  create-gatepass.php:      "                        if (qtyInput) {"
+  create-gatepass copy.php: "                        if(uomLabel) {"
+
+Line 389:
+  create-gatepass.php:      "                            qtyInput.id = `qty_${num}`;"
+  create-gatepass copy.php: "                            uomLabel.setAttribute('for', `uom${num}`);"
+
+Line 390:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                            uomLabel.textContent = `${num}. UOM`;"
+
+Line 391:
+  create-gatepass.php:      "                        if (qtyLabel) {"
+  create-gatepass copy.php: "                        }"
+
+Line 392:
+  create-gatepass.php:      "                            qtyLabel.setAttribute('for', `qty_${num}`);"
+  create-gatepass copy.php: ""
+
+Line 393:
+  create-gatepass.php:      "                            qtyLabel.textContent = `${num}. Item Quantity`;"
+  create-gatepass copy.php: "                        if (num === 1) {"
+
+Line 394:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                            if(descInput) descInput.required = true;"
+
+Line 395:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            if(qtyInput) qtyInput.required = true;"
+
+Line 396:
+  create-gatepass.php:      "                        const uomInput = row.querySelector('.item-uom');"
+  create-gatepass copy.php: "                            if(uomInput) uomInput.required = true;"
+
+Line 397:
+  create-gatepass.php:      "                        const uomLabel = row.querySelector('.item-uom-label');"
+  create-gatepass copy.php: "                        } else {"
+
+Line 398:
+  create-gatepass.php:      "                        if (uomInput) {"
+  create-gatepass copy.php: "                            if(descInput) descInput.required = false;"
+
+Line 399:
+  create-gatepass.php:      "                            uomInput.id = `uom_${num}`;"
+  create-gatepass copy.php: "                            if(qtyInput) qtyInput.required = false;"
+
+Line 400:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                            if(uomInput) uomInput.required = false;"
+
+Line 401:
+  create-gatepass.php:      "                        if (uomLabel) {"
+  create-gatepass copy.php: "                        }"
+
+Line 402:
+  create-gatepass.php:      "                            uomLabel.setAttribute('for', `uom_${num}`);"
+  create-gatepass copy.php: ""
+
+Line 403:
+  create-gatepass.php:      "                            uomLabel.textContent = `${num}. UOM`;"
+  create-gatepass copy.php: "                        const removeBtn = row.querySelector('.remove-item-btn');"
+
+Line 404:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                        if(removeBtn) {"
+
+Line 405:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            if (rows.length > 1) {"
+
+Line 406:
+  create-gatepass.php:      "                        if (num === 1) {"
+  create-gatepass copy.php: "                                removeBtn.style.display = 'block';"
+
+Line 407:
+  create-gatepass.php:      "                            if (descInput) descInput.required = true;"
+  create-gatepass copy.php: "                            } else {"
+
+Line 408:
+  create-gatepass.php:      "                            if (qtyInput) qtyInput.required = true;"
+  create-gatepass copy.php: "                                removeBtn.style.display = 'none';"
+
+Line 409:
+  create-gatepass.php:      "                            if (uomInput) uomInput.required = true;"
+  create-gatepass copy.php: "                            }"
+
+Line 410:
+  create-gatepass.php:      "                        } else {"
+  create-gatepass copy.php: "                        }"
+
+Line 411:
+  create-gatepass.php:      "                            if (descInput) descInput.required = false;"
+  create-gatepass copy.php: "                    });"
+
+Line 412:
+  create-gatepass.php:      "                            if (qtyInput) qtyInput.required = false;"
+  create-gatepass copy.php: ""
+
+Line 413:
+  create-gatepass.php:      "                            if (uomInput) uomInput.required = false;"
+  create-gatepass copy.php: "                    if (rows.length >= maxItems) {"
+
+Line 414:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                        addItemBtn.style.display = 'none';"
+
+Line 415:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                    } else {"
+
+Line 416:
+  create-gatepass.php:      "                        const removeBtn = row.querySelector('.remove-item-btn');"
+  create-gatepass copy.php: "                        addItemBtn.style.display = 'inline-block';"
+
+Line 417:
+  create-gatepass.php:      "                        if (removeBtn) {"
+  create-gatepass copy.php: "                    }"
+
+Line 418:
+  create-gatepass.php:      "                            if (rows.length > 1) {"
+  create-gatepass copy.php: "                }"
+
+Line 419:
+  create-gatepass.php:      "                                removeBtn.style.display = 'block';"
+  create-gatepass copy.php: ""
+
+Line 420:
+  create-gatepass.php:      "                            } else {"
+  create-gatepass copy.php: "                addItemBtn.addEventListener('click', function() {"
+
+Line 421:
+  create-gatepass.php:      "                                removeBtn.style.display = 'none';"
+  create-gatepass copy.php: "                    const rows = itemsContainer.querySelectorAll('.item-row');"
+
+Line 422:
+  create-gatepass.php:      "                            }"
+  create-gatepass copy.php: "                    if (rows.length < maxItems) {"
+
+Line 423:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                        const firstRow = rows[0];"
+
+Line 424:
+  create-gatepass.php:      "                    });"
+  create-gatepass copy.php: "                        const newRow = firstRow.cloneNode(true);"
+
+Line 426:
+  create-gatepass.php:      "                    if (rows.length >= maxItems) {"
+  create-gatepass copy.php: "                        const descInput = newRow.querySelector('.item-desc');"
+
+Line 427:
+  create-gatepass.php:      "                        addItemBtn.style.display = 'none';"
+  create-gatepass copy.php: "                        const qtyInput = newRow.querySelector('.item-qty');"
+
+Line 428:
+  create-gatepass.php:      "                    } else {"
+  create-gatepass copy.php: "                        const uomInput = newRow.querySelector('.item-uom');"
+
+Line 429:
+  create-gatepass.php:      "                        addItemBtn.style.display = 'inline-block';"
+  create-gatepass copy.php: "                        if(descInput) descInput.value = '';"
+
+Line 430:
+  create-gatepass.php:      "                    }"
+  create-gatepass copy.php: "                        if(qtyInput) qtyInput.value = '';"
+
+Line 431:
+  create-gatepass.php:      "                }"
+  create-gatepass copy.php: "                        if(uomInput) uomInput.value = '';"
+
+Line 433:
+  create-gatepass.php:      "                addItemBtn.addEventListener('click', function () {"
+  create-gatepass copy.php: "                        const removeBtn = newRow.querySelector('.remove-item-btn');"
+
+Line 434:
+  create-gatepass.php:      "                    const rows = itemsContainer.querySelectorAll('.item-row');"
+  create-gatepass copy.php: "                        if(removeBtn) {"
+
+Line 435:
+  create-gatepass.php:      "                    if (rows.length < maxItems) {"
+  create-gatepass copy.php: "                            removeBtn.addEventListener('click', function() {"
+
+Line 436:
+  create-gatepass.php:      "                        const firstRow = rows[0];"
+  create-gatepass copy.php: "                                newRow.remove();"
+
+Line 437:
+  create-gatepass.php:      "                        const newRow = firstRow.cloneNode(true);"
+  create-gatepass copy.php: "                                updateItemIndices();"
+
+Line 438:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                            });"
+
+Line 439:
+  create-gatepass.php:      "                        const descInput = newRow.querySelector('.item-desc');"
+  create-gatepass copy.php: "                        }"
+
+Line 440:
+  create-gatepass.php:      "                        const qtyInput = newRow.querySelector('.item-qty');"
+  create-gatepass copy.php: ""
+
+Line 441:
+  create-gatepass.php:      "                        const uomInput = newRow.querySelector('.item-uom');"
+  create-gatepass copy.php: "                        itemsContainer.appendChild(newRow);"
+
+Line 442:
+  create-gatepass.php:      "                        if (descInput) descInput.value = '';"
+  create-gatepass copy.php: "                        updateItemIndices();"
+
+Line 443:
+  create-gatepass.php:      "                        if (qtyInput) qtyInput.value = '';"
+  create-gatepass copy.php: "                    }"
+
+Line 444:
+  create-gatepass.php:      "                        if (uomInput) uomInput.value = '';"
+  create-gatepass copy.php: "                });"
+
+Line 446:
+  create-gatepass.php:      "                        const removeBtn = newRow.querySelector('.remove-item-btn');"
+  create-gatepass copy.php: "                const initialRemoveBtn = itemsContainer.querySelector('.remove-item-btn');"
+
+Line 447:
+  create-gatepass.php:      "                        if (removeBtn) {"
+  create-gatepass copy.php: "                if (initialRemoveBtn) {"
+
+Line 448:
+  create-gatepass.php:      "                            removeBtn.addEventListener('click', function () {"
+  create-gatepass copy.php: "                    initialRemoveBtn.addEventListener('click', function() {"
+
+Line 449:
+  create-gatepass.php:      "                                newRow.remove();"
+  create-gatepass copy.php: "                        const row = this.closest('.item-row');"
+
+Line 450:
+  create-gatepass.php:      "                                updateItemIndices();"
+  create-gatepass copy.php: "                        row.remove();"
+
+Line 451:
+  create-gatepass.php:      "                            });"
+  create-gatepass copy.php: "                        updateItemIndices();"
+
+Line 452:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: "                    });"
+
+Line 453:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "                }"
+
+Line 454:
+  create-gatepass.php:      "                        itemsContainer.appendChild(newRow);"
+  create-gatepass copy.php: ""
+
+Line 455:
+  create-gatepass.php:      "                        updateItemIndices();"
+  create-gatepass copy.php: "                updateItemIndices();"
+
+Line 456:
+  create-gatepass.php:      "                    }"
+  create-gatepass copy.php: "            });"
+
+Line 457:
+  create-gatepass.php:      "                });"
+  create-gatepass copy.php: "        <\/script>"
+
+Line 458:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "        <?php"
+
+Line 459:
+  create-gatepass.php:      "                const initialRemoveBtn = itemsContainer.querySelector('.remove-item-btn');"
+  create-gatepass copy.php: "    } catch (Exception $e) {"
+
+Line 460:
+  create-gatepass.php:      "                if (initialRemoveBtn) {"
+  create-gatepass copy.php: "        echo $e;"
+
+Line 461:
+  create-gatepass.php:      "                    initialRemoveBtn.addEventListener('click', function () {"
+  create-gatepass copy.php: "    } finally {"
+
+Line 462:
+  create-gatepass.php:      "                        const row = this.closest('.item-row');"
+  create-gatepass copy.php: ""
+
+Line 463:
+  create-gatepass.php:      "                        row.remove();"
+  create-gatepass copy.php: "    }"
+
+Line 464:
+  create-gatepass.php:      "                        updateItemIndices();"
+  create-gatepass copy.php: "    ?>"
+
+Line 465:
+  create-gatepass.php:      "                    });"
+  create-gatepass copy.php: "<\/body>"
+
+Line 466:
+  create-gatepass.php:      "                }"
+  create-gatepass copy.php: ""
+
+Line 467:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: "<\/html>"
+
+Line 468:
+  create-gatepass.php:      "                \/\/ Dynamic min limits for date and return date inputs"
+  create-gatepass copy.php: [EOF]
+
+Line 469:
+  create-gatepass.php:      "                const dateInput = document.getElementById('date');"
+  create-gatepass copy.php: [EOF]
+
+Line 470:
+  create-gatepass.php:      "                const returnDateInput = document.getElementById('returnDate');"
+  create-gatepass copy.php: [EOF]
+
+Line 471:
+  create-gatepass.php:      "                if (dateInput && returnDateInput) {"
+  create-gatepass copy.php: [EOF]
+
+Line 472:
+  create-gatepass.php:      "                    const todayStr = new Date().toISOString().split('T')[0];"
+  create-gatepass copy.php: [EOF]
+
+Line 473:
+  create-gatepass.php:      "                    dateInput.min = todayStr;"
+  create-gatepass copy.php: [EOF]
+
+Line 474:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 475:
+  create-gatepass.php:      "                    function updateReturnDateMin() {"
+  create-gatepass copy.php: [EOF]
+
+Line 476:
+  create-gatepass.php:      "                        const baseDateVal = dateInput.value || todayStr;"
+  create-gatepass copy.php: [EOF]
+
+Line 477:
+  create-gatepass.php:      "                        let baseDate = new Date(baseDateVal);"
+  create-gatepass copy.php: [EOF]
+
+Line 478:
+  create-gatepass.php:      "                        baseDate.setDate(baseDate.getDate() + 1);"
+  create-gatepass copy.php: [EOF]
+
+Line 479:
+  create-gatepass.php:      "                        const yyyy = baseDate.getFullYear();"
+  create-gatepass copy.php: [EOF]
+
+Line 480:
+  create-gatepass.php:      "                        const mm = String(baseDate.getMonth() + 1).padStart(2, '0');"
+  create-gatepass copy.php: [EOF]
+
+Line 481:
+  create-gatepass.php:      "                        const dd = String(baseDate.getDate()).padStart(2, '0');"
+  create-gatepass copy.php: [EOF]
+
+Line 482:
+  create-gatepass.php:      "                        returnDateInput.min = `${yyyy}-${mm}-${dd}`;"
+  create-gatepass copy.php: [EOF]
+
+Line 483:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 484:
+  create-gatepass.php:      "                        if (returnDateInput.value && returnDateInput.value <= dateInput.value) {"
+  create-gatepass copy.php: [EOF]
+
+Line 485:
+  create-gatepass.php:      "                            returnDateInput.value = '';"
+  create-gatepass copy.php: [EOF]
+
+Line 486:
+  create-gatepass.php:      "                        }"
+  create-gatepass copy.php: [EOF]
+
+Line 487:
+  create-gatepass.php:      "                    }"
+  create-gatepass copy.php: [EOF]
+
+Line 488:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 489:
+  create-gatepass.php:      "                    dateInput.addEventListener('change', updateReturnDateMin);"
+  create-gatepass copy.php: [EOF]
+
+Line 490:
+  create-gatepass.php:      "                    updateReturnDateMin();"
+  create-gatepass copy.php: [EOF]
+
+Line 491:
+  create-gatepass.php:      "                }"
+  create-gatepass copy.php: [EOF]
+
+Line 492:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 493:
+  create-gatepass.php:      "                updateItemIndices();"
+  create-gatepass copy.php: [EOF]
+
+Line 494:
+  create-gatepass.php:      "            });"
+  create-gatepass copy.php: [EOF]
+
+Line 495:
+  create-gatepass.php:      "        <\/script>"
+  create-gatepass copy.php: [EOF]
+
+Line 496:
+  create-gatepass.php:      "        <?php"
+  create-gatepass copy.php: [EOF]
+
+Line 497:
+  create-gatepass.php:      "    } catch (Exception $e) {"
+  create-gatepass copy.php: [EOF]
+
+Line 498:
+  create-gatepass.php:      "        echo $e;"
+  create-gatepass copy.php: [EOF]
+
+Line 499:
+  create-gatepass.php:      "    } finally {"
+  create-gatepass copy.php: [EOF]
+
+Line 500:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 501:
+  create-gatepass.php:      "    }"
+  create-gatepass copy.php: [EOF]
+
+Line 502:
+  create-gatepass.php:      "    ?>"
+  create-gatepass copy.php: [EOF]
+
+Line 503:
+  create-gatepass.php:      "<\/body>"
+  create-gatepass copy.php: [EOF]
+
+Line 504:
+  create-gatepass.php:      ""
+  create-gatepass copy.php: [EOF]
+
+Line 505:
+  create-gatepass.php:      "<\/html>"
+  create-gatepass copy.php: [EOF]
+
