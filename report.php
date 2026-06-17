@@ -45,49 +45,52 @@ requireLogin();
                             <div class="row g-3 mb-3 align-items-stretch">
 
                                 <div class="col-md-2">
-                                    <div class="kpi-box bg-primary text-white h4 d-flex justify-content-center align-items-center">
+                                    <div class="kpi-box kpi-hdr-bhel text-white h4 d-flex justify-content-center align-items-center">
                                         BHEL-HPVP Material
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-generated">
                                         <div class="kpi-title">Generated</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) hpvp_tot FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ?");
                                             $prepstmt->execute(['BHEL-HPVP']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['hpvp_tot'];
                                         ?>    
-                                        <div class="kpi-value text-primary"><?php echo $result['hpvp_tot']; ?></div>
+                                        <div class="kpi-value text-primary <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="BHEL-HPVP" data-type="generated" data-title="BHEL-HPVP - Generated Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-rejected">
                                         <div class="kpi-title">Rejected</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) hpvp_rej FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ? AND HO_STATUS = 'GATEPASS_REJECTED'");
                                             $prepstmt->execute(['BHEL-HPVP']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['hpvp_rej'];
                                         ?>    
-                                        <div class="kpi-value text-danger"><?php echo $result['hpvp_rej']; ?></div>
+                                        <div class="kpi-value text-danger <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="BHEL-HPVP" data-type="rejected" data-title="BHEL-HPVP - Rejected Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-security">
                                         <div class="kpi-title">Security Out</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) hpvp_sec_out FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ? AND HO_STATUS = 'SECURITY_OUT_DONE'");
                                             $prepstmt->execute(['BHEL-HPVP']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['hpvp_sec_out'];
                                         ?>  
-                                        <div class="kpi-value text-warning"><?php echo $result['hpvp_sec_out']; ?></div>
+                                        <div class="kpi-value text-warning <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="BHEL-HPVP" data-type="security" data-title="BHEL-HPVP - Security Out Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-partial">
                                         <div class="kpi-title">Partial Return</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT * FROM (SELECT HOI_GATEPASS_SLNO, SUM(A.DIFF) DEFICIT FROM(
@@ -99,13 +102,14 @@ requireLogin();
                                                 AND X.DEFICIT > 0 AND HO_STATUS = 'SECURITY_OUT_DONE'");
                                             $prepstmt->execute();
                                             $result = $prepstmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $count = count($result);
                                         ?> 
-                                        <div class="kpi-value text-info"><?php echo count($result); ?></div>
+                                        <div class="kpi-value text-info <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="BHEL-HPVP" data-type="partial" data-title="BHEL-HPVP - Partial Return Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-total">
                                         <div class="kpi-title">Total Return</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT * FROM (SELECT HOI_GATEPASS_SLNO, SUM(A.DIFF) DEFICIT FROM(
@@ -117,8 +121,9 @@ requireLogin();
                                                 AND X.DEFICIT = 0 AND X.DEFICIT = 0");
                                             $prepstmt->execute();
                                             $result = $prepstmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $count = count($result);
                                         ?>                                          
-                                        <div class="kpi-value text-success"><?php echo count($result); ?></div>
+                                        <div class="kpi-value text-success <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="BHEL-HPVP" data-type="total" data-title="BHEL-HPVP - Total Return Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
@@ -128,49 +133,52 @@ requireLogin();
                             <div class="row g-3 align-items-stretch">
 
                                 <div class="col-md-2">
-                                    <div class="kpi-box bg-secondary text-white h4 d-flex justify-content-center align-items-center">
+                                    <div class="kpi-box kpi-hdr-vendor text-white h4 d-flex justify-content-center align-items-center">
                                         Vendor Material
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-generated">
                                         <div class="kpi-title">Generated</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) vend_tot FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ?");
                                             $prepstmt->execute(['Vendor']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['vend_tot'];
                                         ?>  
-                                        <div class="kpi-value text-primary"><?php echo $result['vend_tot']; ?></div>
+                                        <div class="kpi-value text-primary <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="Vendor" data-type="generated" data-title="Vendor - Generated Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-rejected">
                                         <div class="kpi-title">Rejected</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) vend_rej FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ? AND HO_STATUS = 'GATEPASS_REJECTED'");
                                             $prepstmt->execute(['Vendor']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['vend_rej'];
                                         ?>  
-                                        <div class="kpi-value text-danger"><?php echo $result['vend_rej']; ?></div>
+                                        <div class="kpi-value text-danger <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="Vendor" data-type="rejected" data-title="Vendor - Rejected Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-security">
                                         <div class="kpi-title">Security In</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT COUNT(*) vend_sec_in FROM hpvp_osgp WHERE HO_MATERIAL_OWNER = ? AND HO_STATUS = 'SECURITY_IN_DONE'");
                                             $prepstmt->execute(['Vendor']);
                                             $result = $prepstmt->fetch(PDO::FETCH_ASSOC);
+                                            $count = (int)$result['vend_sec_in'];
                                         ?>  
-                                        <div class="kpi-value text-warning"><?php echo $result['vend_sec_in']; ?></div>
+                                        <div class="kpi-value text-warning <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="Vendor" data-type="security" data-title="Vendor - Security In Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-partial">
                                         <div class="kpi-title">Partial Return</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT * FROM (SELECT HOI_GATEPASS_SLNO, SUM(A.DIFF) DEFICIT FROM(
@@ -182,13 +190,14 @@ requireLogin();
                                                 AND X.DEFICIT > 0 AND HO_STATUS = 'SECURITY_IN_DONE'");
                                             $prepstmt->execute();
                                             $result = $prepstmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $count = count($result);
                                         ?> 
-                                        <div class="kpi-value text-info"><?php echo count($result); ?></div>
+                                        <div class="kpi-value text-info <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="Vendor" data-type="partial" data-title="Vendor - Partial Return Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
                                 <div class="col">
-                                    <div class="kpi-box">
+                                    <div class="kpi-box kpi-total">
                                         <div class="kpi-title">Total Return</div>
                                         <?php 
                                             $prepstmt = $dBhandler->prepare("SELECT * FROM (SELECT HOI_GATEPASS_SLNO, SUM(A.DIFF) DEFICIT FROM(
@@ -200,11 +209,32 @@ requireLogin();
                                                 AND X.DEFICIT = 0 AND X.DEFICIT = 0");
                                             $prepstmt->execute();
                                             $result = $prepstmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $count = count($result);
                                         ?>    
-                                        <div class="kpi-value text-success"><?php echo count($result); ?></div>
+                                        <div class="kpi-value text-success <?php echo ($count > 0) ? 'kpi-clickable' : ''; ?>" <?php echo ($count > 0) ? 'data-owner="Vendor" data-type="total" data-title="Vendor - Total Return Gatepasses"' : ''; ?>><?php echo $count; ?></div>
                                     </div>
                                 </div>
 
+                            </div>
+                            
+                            <!-- Detailed Gatepass List Container -->
+                            <div id="reportDetailsContainer" class="mt-4 mb-4" style="display: none;">
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0" style="font-size: 16px; font-weight: 600;">
+                                            <i class="fas fa-list me-2"></i><span id="reportDetailsTitle">Gatepass List</span>
+                                        </h5>
+                                        <button type="button" class="btn-close btn-close-white" id="closeDetailsBtn" aria-label="Close"></button>
+                                    </div>
+                                    <div class="card-body" style="overflow-x: auto;">
+                                        <div id="reportDetailsLoading" class="text-center p-4">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                        </div>
+                                        <div id="reportDetailsContent"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </main>
@@ -274,6 +304,7 @@ requireLogin();
             <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
             <script src="js/datatables-simple-demo.js"></script>
             <script src="js/history.js"></script>                
+            <script src="js/report.js"></script>                
             <?php
         } else {
             header("Location: index.php?err=Session Expired");

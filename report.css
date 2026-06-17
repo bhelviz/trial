@@ -1,0 +1,141 @@
+.kpi-box {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 22px 16px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kpi-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kpi-value {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Base Hover Effects */
+.kpi-box:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Category Header Cards (BHEL-HPVP & Vendor) */
+.kpi-hdr-bhel {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.kpi-hdr-bhel:hover {
+    box-shadow: 0 12px 20px rgba(30, 60, 114, 0.3), 0 4px 8px rgba(30, 60, 114, 0.15);
+}
+
+.kpi-hdr-vendor {
+    background: linear-gradient(135deg, #4b5563 0%, #1f2937 100%);
+    border: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.kpi-hdr-vendor:hover {
+    box-shadow: 0 12px 20px rgba(31, 41, 55, 0.3), 0 4px 8px rgba(31, 41, 55, 0.15);
+}
+
+/* KPI Card Theme Gradients, Borders, Text & Glows */
+
+/* 1. Generated */
+.kpi-generated {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-color: #bfdbfe;
+}
+.kpi-generated .kpi-title {
+    color: #1e40af;
+}
+.kpi-generated .kpi-value {
+    color: #2563eb !important;
+}
+.kpi-generated:hover {
+    box-shadow: 0 12px 20px rgba(37, 99, 235, 0.12), 0 4px 8px rgba(37, 99, 235, 0.06);
+}
+
+/* 2. Rejected */
+.kpi-rejected {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-color: #fecaca;
+}
+.kpi-rejected .kpi-title {
+    color: #991b1b;
+}
+.kpi-rejected .kpi-value {
+    color: #dc2626 !important;
+}
+.kpi-rejected:hover {
+    box-shadow: 0 12px 20px rgba(220, 38, 38, 0.12), 0 4px 8px rgba(220, 38, 38, 0.06);
+}
+
+/* 3. Security (In / Out) */
+.kpi-security {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-color: #fde68a;
+}
+.kpi-security .kpi-title {
+    color: #92400e;
+}
+.kpi-security .kpi-value {
+    color: #d97706 !important;
+}
+.kpi-security:hover {
+    box-shadow: 0 12px 20px rgba(217, 119, 6, 0.12), 0 4px 8px rgba(217, 119, 6, 0.06);
+}
+
+/* 4. Partial Return */
+.kpi-partial {
+    background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+    border-color: #a5f3fc;
+}
+.kpi-partial .kpi-title {
+    color: #075985;
+}
+.kpi-partial .kpi-value {
+    color: #0284c7 !important;
+}
+.kpi-partial:hover {
+    box-shadow: 0 12px 20px rgba(2, 132, 199, 0.12), 0 4px 8px rgba(2, 132, 199, 0.06);
+}
+
+/* 5. Total Return */
+.kpi-total {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-color: #bbf7d0;
+}
+.kpi-total .kpi-title {
+    color: #065f46;
+}
+.kpi-total .kpi-value {
+    color: #10b981 !important;
+}
+.kpi-total:hover {
+    box-shadow: 0 12px 20px rgba(16, 185, 129, 0.12), 0 4px 8px rgba(16, 185, 129, 0.06);
+}
+
+.kpi-clickable {
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.kpi-clickable:hover {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
